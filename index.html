@@ -3,7 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Freelance Hourly Rate Calculator</title>
+  
+  <!-- SEO META TAGS -->
+  <title>Freelance Hourly Rate Calculator | Calculate Your Ideal Pricing</title>
+  <meta name="description" content="Calculate your ideal freelance hourly rate, day rate, and gross revenue targets instantly. Factor in taxes, overhead, billable hours, and profit margins with our free rate calculator.">
+  <meta name="keywords" content="freelance hourly rate calculator, freelancer pricing tool, billable hour calculator, how much to charge freelance, consultant day rate calculator, freelance tax estimation tool">
+  <meta name="author" content="Freelance Business Tools">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://example.com/freelance-hourly-rate-calculator">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/freelance-hourly-rate-calculator">
+  <meta property="og:title" content="Freelance Hourly Rate & Pricing Calculator">
+  <meta property="og:description" content="Determine the exact hourly rate you need to charge to hit your income goals, cover self-employment taxes, and account for time off.">
+  <meta property="og:image" content="https://example.com/assets/freelance-calculator-og.jpg">
+  <meta property="og:site_name" content="Freelance Toolkit">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://example.com/freelance-hourly-rate-calculator">
+  <meta name="twitter:title" content="Freelance Hourly Rate & Pricing Calculator">
+  <meta name="twitter:description" content="Free calculator for freelancers, consultants, and contractors. Factor in expenses, tax reserves, and billable hours.">
+  <meta name="twitter:image" content="https://example.com/assets/freelance-calculator-og.jpg">
+
+  <!-- STRUCTURED DATA (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://example.com/freelance-hourly-rate-calculator#webapp",
+        "url": "https://example.com/freelance-hourly-rate-calculator",
+        "name": "Freelance Hourly Rate Calculator",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "description": "Calculate target hourly rates, daily rates, minimum gross revenue, and tax reserves for independent freelancers and contractors.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://example.com/freelance-hourly-rate-calculator#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I calculate my freelance hourly rate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To calculate your freelance hourly rate: 1) Combine your target net salary and annual business overhead. 2) Adjust for self-employment taxes. 3) Add a business profit margin. 4) Divide the total gross revenue requirement by your total annual billable hours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many billable hours should a freelancer expect per week?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most full-time freelancers average between 20 and 25 billable hours per week. The remaining 15 to 20 hours are spent on non-billable tasks such as administrative work, invoicing, marketing, and client discovery."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much should freelancers save for taxes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Full-time freelancers and contractors should typically reserve 25% to 30% of gross revenue for income and self-employment taxes (including Social Security and Medicare contributions)."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
     /* CSS RESET & VARIABLES */
     :root {
@@ -30,8 +107,8 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-main);
-      line-height: 1.5;
-      padding: 20px;
+      line-height: 1.6;
+      padding: 20px 12px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -49,24 +126,24 @@
     }
 
     /* HEADER */
-    .header {
+    header {
       background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
       color: #ffffff;
-      padding: 32px 24px;
+      padding: 36px 24px;
       text-align: center;
     }
 
-    .header h1 {
-      font-size: 1.85rem;
+    header h1 {
+      font-size: 1.9rem;
       font-weight: 700;
       margin-bottom: 8px;
       letter-spacing: -0.025em;
     }
 
-    .header p {
+    header p {
       color: #e0e7ff;
       font-size: 0.95rem;
-      max-width: 600px;
+      max-width: 620px;
       margin: 0 auto;
     }
 
@@ -256,7 +333,6 @@
       max-width: 320px;
     }
 
-    /* Styled button for Stripe Payment Link */
     .stripe-link-btn {
       display: inline-block;
       width: 100%;
@@ -275,8 +351,82 @@
       background: #4b44e0;
     }
 
+    /* INDEXABLE SEO CONTENT SECTION */
+    .seo-content {
+      padding: 32px 24px;
+      border-top: 1px solid var(--border-color);
+      background: #ffffff;
+    }
+
+    .seo-content h2 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: var(--text-main);
+    }
+
+    .seo-content h3 {
+      font-size: 1.05rem;
+      margin: 18px 0 8px 0;
+      color: var(--text-main);
+    }
+
+    .seo-content p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .seo-content ul {
+      margin-left: 20px;
+      margin-bottom: 16px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .seo-content li {
+      margin-bottom: 6px;
+    }
+
+    .seo-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px 0;
+      font-size: 0.875rem;
+    }
+
+    .seo-content th, .seo-content td {
+      border: 1px solid var(--border-color);
+      padding: 10px;
+      text-align: left;
+    }
+
+    .seo-content th {
+      background-color: var(--bg-color);
+      font-weight: 600;
+    }
+
+    .faq-section {
+      margin-top: 24px;
+    }
+
+    .faq-item {
+      margin-bottom: 16px;
+    }
+
+    .faq-item h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .faq-item p {
+      font-size: 0.875rem;
+      margin-bottom: 0;
+    }
+
     /* FOOTER */
-    .footer {
+    footer {
       text-align: center;
       padding: 16px;
       font-size: 0.75rem;
@@ -290,17 +440,17 @@
 
   <div class="container">
     <!-- Header -->
-    <div class="header">
-      <h1>Freelance Rate Calculator</h1>
-      <p>Determine the exact hourly rate you need to charge to hit your income goals, cover taxes, and account for time off.</p>
-    </div>
+    <header>
+      <h1>Freelance Hourly Rate Calculator</h1>
+      <p>Determine the exact hourly rate you need to charge to hit your net income goals, cover business expenses, and account for self-employment taxes.</p>
+    </header>
 
     <!-- Main Content -->
-    <div class="calculator-grid">
+    <main class="calculator-grid">
       
       <!-- Input Column -->
-      <div class="inputs-section">
-        <div class="section-title">1. Your Financial Goals</div>
+      <section class="inputs-section" aria-label="Calculator Input Form">
+        <h2 class="section-title">1. Your Financial Goals</h2>
         
         <div class="form-group">
           <label for="desiredIncome">Target Take-Home Salary (Annual)</label>
@@ -308,7 +458,7 @@
             <span class="input-prefix">$</span>
             <input type="number" id="desiredIncome" class="form-control has-prefix" value="80000" step="1000">
           </div>
-          <div class="help-text">What you want to take home after all expenses and taxes.</div>
+          <div class="help-text">What you want to take home after all business expenses and taxes.</div>
         </div>
 
         <div class="form-group">
@@ -326,17 +476,17 @@
             <input type="number" id="taxRate" class="form-control has-suffix" value="25" min="0" max="50">
             <span class="input-suffix">%</span>
           </div>
-          <div class="help-text">Self-employment + income tax buffer (typically 20%-30%).</div>
+          <div class="help-text">Self-employment + income tax reserve buffer (typically 20%-30%).</div>
         </div>
 
-        <div class="section-title" style="margin-top: 28px;">2. Your Working Capacity</div>
+        <h2 class="section-title" style="margin-top: 28px;">2. Your Working Capacity</h2>
 
         <div class="form-group">
           <label for="billableHours">Billable Hours Per Week</label>
           <div class="input-wrapper">
             <input type="number" id="billableHours" class="form-control" value="25" min="1" max="60">
           </div>
-          <div class="help-text">Hours spent doing client work (average is 20–25 hrs/week).</div>
+          <div class="help-text">Hours spent on direct client work (industry average is 20–25 hrs/week).</div>
         </div>
 
         <div class="form-group">
@@ -355,10 +505,10 @@
           </div>
           <div class="help-text">Reinvested profit margin to build business safety reserves.</div>
         </div>
-      </div>
+      </section>
 
       <!-- Results Column -->
-      <div class="results-section">
+      <section class="results-section" aria-label="Calculation Results Summary">
         <div>
           <div class="primary-card">
             <div class="label">Your Recommended Rate</div>
@@ -387,22 +537,92 @@
         </div>
 
         <!-- High-Converting CTA Box with Live Stripe Payment Link -->
-        <div class="cta-container">
+        <aside class="cta-container">
           <div class="cta-title">Ready to Win Higher-Paying Clients?</div>
           <div class="cta-desc">Get the complete Freelance Proposal & Contract Template Kit built to close high-ticket projects.</div>
 
           <a href="https://buy.stripe.com/3cI8wP68K5bpgnU2JB2Ry00" class="stripe-link-btn" target="_blank" rel="noopener">
             Get The Template Kit ($2.99)
           </a>
-        </div>
-      </div>
+        </aside>
+      </section>
 
-    </div>
+    </main>
+
+    <!-- INDEXABLE SEO CONTENT SECTION FOR TARGETED KEYWORDS -->
+    <article class="seo-content">
+      <h2>How Freelancers Calculate Their True Hourly Rate</h2>
+      <p>Transitioning from a traditional salary to freelancing requires switching from a net income mindset to a <strong>gross revenue requirement mindset</strong>. When working as an employee, your employer pays taxes, health insurance, equipment, and paid time off. As a freelancer, your hourly rate must account for these overheads directly.</p>
+
+      <h3>The Freelance Pricing Formula</h3>
+      <p>To establish your minimum viable hourly rate, use the standard baseline formula:</p>
+      <p><code>Gross Revenue Needed = (Target Salary + Business Expenses) ÷ (1 - Tax Rate) × (1 + Profit Margin)</code></p>
+      <p><code>Minimum Hourly Rate = Gross Revenue Needed ÷ Total Annual Billable Hours</code></p>
+
+      <h3>Billable vs. Non-Billable Hours Benchmarks</h3>
+      <p>A common mistake among new contractors is assuming a 40-hour work week equals 40 billable hours. In reality, independent professionals spend 30% to 50% of their time on unbillable administration, client prospecting, and administrative work.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Role Category</th>
+            <th>Avg Billable Hours / Wk</th>
+            <th>Avg Non-Billable Overhead</th>
+            <th>Recommended Target Rate Range</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Software Developer / Engineer</td>
+            <td>25 - 30 hrs</td>
+            <td>10 - 15 hrs</td>
+            <td>$75 - $175 / hr</td>
+          </tr>
+          <tr>
+            <td>UI/UX & Visual Designer</td>
+            <td>20 - 25 hrs</td>
+            <td>15 - 20 hrs</td>
+            <td>$65 - $140 / hr</td>
+          </tr>
+          <tr>
+            <td>Copywriter & Content Strategist</td>
+            <td>20 - 25 hrs</td>
+            <td>15 - 20 hrs</td>
+            <td>$50 - $120 / hr</td>
+          </tr>
+          <tr>
+            <td>Management / Marketing Consultant</td>
+            <td>15 - 20 hrs</td>
+            <td>20 - 25 hrs</td>
+            <td>$100 - $250+ / hr</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <h4>How do I calculate my freelance hourly rate?</h4>
+          <p>Combine your desired net take-home pay and annual expenses, adjust upward for self-employment tax obligations, add a 10%-20% profit reserve, and divide by total billable hours per year.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>What is the difference between hourly rates and project-based pricing?</h4>
+          <p>Hourly rates bill for actual time spent, protecting you during scope creep. Project-based pricing charges a fixed price derived from estimated billable hours multiplied by your internal hourly rate, rewarding efficiency and expertise.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Should I charge an hourly rate or a day rate?</h4>
+          <p>Day rates are typically calculated by multiplying your hourly rate by 8 hours. Day rates work best for short-term consulting, workshops, or on-site client sprints where full-day dedication is required.</p>
+        </div>
+      </section>
+    </article>
 
     <!-- Footer -->
-    <div class="footer">
+    <footer>
       Powered by Freelance Rate Calculator &bull; Free Open-Source Tool Wheelz
-    </div>
+    </footer>
   </div>
 
   <!-- CALCULATOR LOGIC -->
